@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="capture"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:background="@drawable/bottomsheetbackground"
+        android:layout_width="match_parent"
+        android:padding="16sp"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="70sp"
+            android:layout_height="15sp"
+            android:layout_gravity="center"
+            android:background="@drawable/minusimg" />
+
+        <LinearLayout
+            android:layout_marginTop="10sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:id="@+id/capturephoto"
+                android:background="@drawable/cameraimg" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:layout_marginLeft="16sp"
+                android:text="capture image"
+                android:fontFamily="sans-serif-condensed-light" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:id="@+id/galleryphoto"
+                android:background="@drawable/galleryimg" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="gallery"
+                android:layout_marginLeft="16sp"
+                android:fontFamily="sans-serif-condensed-light" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+
+    android:layout_height="?actionBarSize"
+    android:background="@color/seagreen"
+    android:gravity="center"
+    >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/backimg"
+        android:id="@+id/toolbackbtn"
+        android:layout_marginLeft="16sp"
+
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbaraddress"
+        android:text="ADDRESS"
+       android:layout_weight="2"
+        android:gravity="center"
+        android:paddingRight="35dp"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/personimg"
+        android:id="@+id/personprofileitemimagebtn"
+        android:layout_marginRight="20sp"
+
+
+        />
+
+</LinearLayout>

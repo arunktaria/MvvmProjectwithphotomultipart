@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16sp"
+    android:gravity="center"
+    android:background="@color/seagreen"
+    tools:context="com.example.mvvmproject.UI.LoginActivity">
+
+    <ImageView
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:id="@+id/imageviewlogin"
+android:background="@drawable/ic_launcher_foreground"
+        />
+
+
+    <EditText
+        android:layout_marginTop="50sp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/editext_hight"
+        android:id="@+id/emailedittext"
+        android:hint="Email"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textColorHint="#A19E9E"
+        android:padding="7sp"
+        android:background="@drawable/editextwhitebackground"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/editext_hight"
+        android:id="@+id/passwordedittext"
+        android:hint="Password"
+        android:textColorHint="#A19E9E"
+        android:textSize="17sp"
+        android:padding="7sp"
+        android:inputType="textPassword"
+        android:textColor="@color/black"
+        android:layout_marginTop="16sp"
+        android:background="@drawable/editextwhitebackground"
+        />
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password"
+        android:textSize="15sp"
+        android:layout_margin="16sp"
+        android:gravity="right"
+        android:textColor="@color/white"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="45sp"
+        android:id="@+id/btnlogin"
+        android:text="Login"
+
+        android:textSize="17sp"
+        android:gravity="center"
+        android:background="@drawable/btnbakgroundwhite"
+        android:layout_marginTop="10sp"/>
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Are you new user?"
+        android:textSize="15sp"
+        android:layout_margin="16sp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="45sp"
+        android:id="@+id/signup"
+        android:text="Sign In"
+        android:textSize="17sp"
+        android:gravity="center"
+        android:background="@drawable/btnbakgroundwhite"
+        android:layout_marginTop="10sp"/>
+
+
+
+
+</LinearLayout>

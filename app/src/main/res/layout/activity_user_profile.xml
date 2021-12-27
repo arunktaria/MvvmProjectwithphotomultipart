@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="userprofile"
+            type="com.example.mvvmproject.UserDataEntity2" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        tools:context=".UI.UserProfile">
+
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                android:padding="10sp"
+                android:background="@drawable/imageprofilebackground"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="@{userprofile.first_name+' '+userprofile.last_name}"
+
+                android:textColor="@color/white"
+                android:textSize="25sp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shapeableImageView"
+                app:layout_constraintVertical_bias="0.034" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/shapeableImageView"
+                android:layout_width="120sp"
+                android:layout_height="120sp"
+                android:padding="5sp"
+
+                android:scaleType="centerCrop"
+                android:background="@drawable/profileoutline"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/userimage"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.53"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.051"
+                app:shapeAppearanceOverlay="@style/roundedimagebackground" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:background="@drawable/profileoutline"
+                android:backgroundTint="@color/white"
+                android:id="@+id/getimagefloatingbtn"
+                android:src="@drawable/cameraimg"
+                app:layout_constraintBottom_toBottomOf="@+id/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.62"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="30sp"
+    android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FIRST NAME"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textSize="@dimen/textsize" />
+
+        <EditText
+            android:id="@+id/firstname"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/editext_hight"
+            android:layout_marginTop="4dp"
+            android:text="@={userprofile.first_name}"
+            android:background="@drawable/editextblackbackground"
+            android:hint="First name"
+            android:padding="7dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LAST NAME"
+        android:layout_marginTop="16sp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textSize="@dimen/textsize" />
+
+    <EditText
+        android:id="@+id/lastname"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/editext_hight"
+        android:layout_marginTop="4dp"
+        android:text="@={userprofile.last_name}"
+        android:background="@drawable/editextblackbackground"
+        android:hint="First name"
+        android:padding="7dp" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BIRTH DATE"
+        android:layout_marginTop="16sp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textSize="@dimen/textsize" />
+
+    <EditText
+        android:id="@+id/birthday"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/editext_hight"
+        android:layout_marginTop="4dp"
+        android:text="@={userprofile.dob}"
+        android:background="@drawable/editextblackbackground"
+        android:hint="birthday"
+        android:padding="7dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EMAIL"
+        android:layout_marginTop="16sp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textSize="@dimen/textsize" />
+
+    <EditText
+        android:id="@+id/emaileditextprofile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/editext_hight"
+        android:layout_marginTop="4dp"
+        android:text="@={userprofile.email}"
+        android:background="@drawable/editextblackbackground"
+        android:hint="Email"
+        android:padding="7dp" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MOBILE NUMBER"
+        android:layout_marginTop="16sp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textSize="@dimen/textsize" />
+
+    <EditText
+        android:id="@+id/mobilenumprofile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/editext_hight"
+        android:layout_marginTop="4dp"
+        android:text="@={userprofile.mobile}"
+        android:background="@drawable/editextblackbackground"
+        android:hint="mobile number"
+        android:padding="7dp" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADDRESS"
+        android:layout_marginTop="16sp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textSize="@dimen/textsize" />
+
+    <EditText
+        android:id="@+id/addressprofile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/editext_hight"
+        android:layout_marginTop="4dp"
+        android:text="@={userprofile.address}"
+        android:background="@drawable/editextblackbackground"
+        android:hint="address"
+        android:padding="7dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COUNTRY"
+        android:layout_marginTop="16sp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textSize="@dimen/textsize" />
+
+    <EditText
+        android:id="@+id/contryprofile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/editext_hight"
+        android:layout_marginTop="4dp"
+        android:text="@={userprofile.country}"
+        android:background="@drawable/editextblackbackground"
+        android:hint="country"
+        android:padding="7dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STATE"
+        android:layout_marginTop="16sp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textSize="@dimen/textsize" />
+
+    <EditText
+        android:id="@+id/stateprofilee"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/editext_hight"
+        android:layout_marginTop="4dp"
+        android:text="@={userprofile.state}"
+        android:background="@drawable/editextblackbackground"
+        android:hint="state"
+        android:padding="7dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CITY"
+        android:layout_marginTop="16sp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textSize="@dimen/textsize" />
+
+    <EditText
+        android:id="@+id/cityprofilee"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/editext_hight"
+        android:layout_marginTop="4dp"
+        android:text="@={userprofile.city}"
+        android:background="@drawable/editextblackbackground"
+        android:hint="city"
+        android:padding="7dp" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ZIP CODE"
+        android:layout_marginTop="16sp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textSize="@dimen/textsize" />
+
+    <EditText
+        android:id="@+id/zipcodeprofile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/editext_hight"
+        android:layout_marginTop="4dp"
+        android:text="@={userprofile.zip_code}"
+        android:background="@drawable/editextblackbackground"
+        android:hint="city code"
+        android:padding="7dp" />
+
+
+
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="45sp"
+    android:id="@+id/btnupdateprofile"
+    android:text="UPDATE"
+    android:layout_marginTop="20sp"
+
+    android:background="@drawable/btnbackground"
+    />
+
+
+
+
+</LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+</layout>
